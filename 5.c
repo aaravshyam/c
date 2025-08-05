@@ -20,8 +20,8 @@ int main() {
 
 void inputTemperatures(int n, float temps[n]) {
     printf("Enter temperatures for 7 days:\n");
-
-    for (int i = 0; i < n; i++) {
+	int i;
+    for (i = 0; i < n; i++) {
         printf("Day %d: ", i + 1);
         scanf("%f", &temps[i]);
     }
@@ -29,8 +29,8 @@ void inputTemperatures(int n, float temps[n]) {
 
 float findHighest(int n, float temps[n]) {
     float max = temps[0];
-
-    for (int i = 1; i < n; i++) {
+    int i;
+    for (i = 1; i < n; i++) {
         if (temps[i] > max) {
             max = temps[i];
         }
@@ -41,8 +41,9 @@ float findHighest(int n, float temps[n]) {
 
 float findLowest(int n, float temps[n]) {
     float min = temps[0];
-
-    for (int i = 1; i < n; i++) {
+    
+    int i;
+    for (i = 1; i < n; i++) {
         if (temps[i] < min) {
             min = temps[i];
         }
